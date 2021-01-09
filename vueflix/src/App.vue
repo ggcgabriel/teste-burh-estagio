@@ -23,26 +23,15 @@ export default {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    color: #FFF;
   }
 
   body{
     background-color: #141414;
-    color: #FFF;
   }
   
   a{
     text-decoration: none;
-  }
-
-  header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 16px;
-  }
-
-  h1{
-    color: #e50914;
   }
 
 </style>

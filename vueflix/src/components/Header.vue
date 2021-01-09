@@ -13,5 +13,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>    
+  h1{
+     color: #e50914;
+  }
+
+  header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+  }
 
 </style>
