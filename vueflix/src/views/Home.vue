@@ -1,15 +1,15 @@
 <template>
   <div class="home">
-    home
+    <div class="featured-card">
+      <router-link to="/movie/tt0409591">
+
+      </router-link> 
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
 
 export default {
-  name: 'Home',
-  components: {
-  }
 }
 </script>
