@@ -1,5 +1,7 @@
 <template>
-  
+    <div class="cards">
+        <h2>One piece</h2>
+    </div>
 </template>
 
 <script>
