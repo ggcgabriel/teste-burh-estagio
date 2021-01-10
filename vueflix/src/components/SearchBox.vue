@@ -7,7 +7,16 @@
 
         <div class="movies-list">
             <div class="movie" v-for="movie in movies" :key="movie.imdbID">
-            {{movie.Title}}
+                <router-link to="/movie/movie.i" class="movie-link">
+                    <div class="product-image">
+                        <img :src="movie.Poster" alt="Movie Poster">
+                        <div class="type">{{ movie.Type }}</div>
+                    </div>
+                    <div class="detail">
+                        <p>{{  movie.Year  }}</p>
+                        <h3>{{ movie.Title }}</h3>
+                    </div>
+                </router-link>
          </div>
       </div>
   </div>
@@ -45,6 +54,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    // search box
     .search-box {
         display: flex;
         flex-direction: column;
@@ -83,4 +93,56 @@ export default {
             }
         }   
     }
+
+    // movies list
+    .movies-list{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0px 8px ;
+
+        .movie {
+            max-width: 50%;
+            flex: 1 1 50%;
+            padding: 16px 8px;
+
+            .movie-link{
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+
+                .product-image {
+                    position: relative; 
+                    display: block;
+
+                    img{
+                        display: block;
+                        width: 100%;
+                        height: 275px;
+                        object-fit: cover;
+                    }
+
+                    .type{
+                        position: absolute; 
+                        padding: 8px 16px;
+                        bottom: 16px; 
+                        left: 0px;
+                        text-transform: capitalize;
+                        background-color:  #e50914;
+                        font-weight: bold;  
+
+                    }
+                }
+
+                .detail{
+                    padding: 16px 8px;
+                    flex: 1 1 100%;
+                    border-radius: 0px 0px 0px 8px;
+                    background-color: #496583;
+                }
+            }
+        }
+
+        
+    }
+
 </style>

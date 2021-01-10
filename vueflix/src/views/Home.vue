@@ -1,7 +1,7 @@
 <template>
   <main class="home">
     <div class="featured-card">
-      <router-link to="/movie/tt0409591">
+      <router-link to="'/movie/'+imdbID">
         <img src="https://sm.ign.com/t/ign_br/screenshot/default/narutinho_rq9u.1280.jpg" alt="item image" class="featured-img">
         <div class="detail">
           <h2>Naruto</h2>
