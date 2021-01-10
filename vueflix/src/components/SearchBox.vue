@@ -1,11 +1,15 @@
 <template>
   <div class="search">
-      <form @submit.prevent="SearchMovies" class="search-box" >
+      <form @submit.prevent="SearchMovies()" class="search-box" >
           <input type="text" placeholder="Filmes, séries ou Animes." v-model="search">
           <input type="submit" value="Buscar">
       </form>
 
-      <div class="movies-list">Movies</div>
+        <div class="movies-list">
+            <div class="movie" v-for="movie in movies" :key="movie.imdbID">
+            {{movie.Title}}
+         </div>
+      </div>
   </div>
 </template>
 
@@ -26,11 +30,11 @@ export default {
                 fetch(`http://www.omdbapi.com/?apikey=${env.apikey}&s=${search.value}`)
                     .then(response => response.json())
                     .then(data => {
-                        console.log(data);  
+                        movies.value = data.Search;
+                        search.value = "";
                     });
             }
         }
-
         return{ 
             search,         
             movies,
@@ -48,14 +52,12 @@ export default {
         align-items: center;
         padding: 16px;
     
-
         input {
             display: block;
             border: none;       
             outline: none;   
             border-radius: 8px;
             font-size: 20px;
-
             &[type="text"] {
                 width: 100%;
                 background-color: #496583;
@@ -64,13 +66,10 @@ export default {
                 transition: 0.4s;
                 
                     
-
                 &::placeholder {
                     color: #f3f3f3;
                 }
-
             }
-
             &[type="submit"] {
                 width: 100%;
                 max-width: 300px;
@@ -78,12 +77,10 @@ export default {
                 background-color: #e50914;
                 text-transform: uppercase;
                 font-weight: bold;
-
                 &:active {
                     opacity : 0.5;
                 }
             }
         }   
     }
-
 </style>
