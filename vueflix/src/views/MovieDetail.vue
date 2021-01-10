@@ -1,9 +1,9 @@
 <template>
   <div class="movie-detail">
     <h2>{{movie.Title}}</h2>
-    <p>{{ movie.Year }}</p>
     <img :src="movie.Poster" alt="Movie Poster" class="featured-img" />
-    <p>{{ movie.Plot }}</p>
+    <p>{{ movie.Year }}</p>
+    <p class="plot">{{ movie.Plot }}</p>
   </div>
 </template>
 
@@ -48,9 +48,19 @@ export default {
     margin-bottom: 16px;
   }
 
-  p {
+  p{
     font-size: 18px;
     line-height: 1.4;
+    
+
+  }
+  .plot {
+    font-size: 18px;
+    line-height: 1.4;
+    background-color:  #496583;
+    padding: 16px;
+    border-radius: 8px;
+    margin-top: 5px;
   }
 }
 </style>

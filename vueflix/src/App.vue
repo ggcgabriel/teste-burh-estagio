@@ -28,10 +28,13 @@ export default {
 
   body{
     background-color: #141414;
+    max-width: 1200px;
+    margin: 0 auto;
   }
   
   a{
     text-decoration: none;
   }
+  
 
 </style>

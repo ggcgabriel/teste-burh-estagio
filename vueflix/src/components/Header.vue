@@ -18,6 +18,10 @@ export default {
   }
 
   header{
+    // @media (min-width: 768px ) {
+    //   justify-content: left;
+    //   align-items: left;
+    // }
     display: flex;
     align-items: center;
     justify-content: center;

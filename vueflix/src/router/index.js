@@ -15,7 +15,7 @@ const routes = [
     component: MovieDetail  
   },
   {
-    path:'/*',
+    path:'/**',
     name:'Not Found',
     component: NotFound
   }

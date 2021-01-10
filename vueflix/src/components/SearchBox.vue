@@ -56,6 +56,7 @@ export default {
 <style lang="scss" scoped>
     // search box
     .search-box {
+
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -68,7 +69,9 @@ export default {
             outline: none;   
             border-radius: 8px;
             font-size: 20px;
+
             &[type="text"] {
+                
                 width: 100%;
                 background-color: #496583;
                 padding: 10px 16px;
@@ -101,8 +104,11 @@ export default {
         margin: 0px 8px ;
 
         .movie {
-            max-width: 50%;
-            flex: 1 1 50%;
+            @media (min-width: 768px ) {
+                flex: 50%;
+            }
+            max-width: 100%;
+            flex: 100%;
             padding: 16px 8px;
 
             .movie-link{
@@ -134,6 +140,7 @@ export default {
                 }
 
                 .detail{
+                    @media (min-width: 768px ) {}
                     padding: 16px 8px;
                     flex: 1 1 100%;
                     border-radius: 0px 0px 0px 8px;
